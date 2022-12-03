@@ -6,12 +6,10 @@ root.title("Calculator")
 e = Entry(root, width=35, bg="white", fg="black", borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, pady=10, padx=10)
 
-
 def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
-
 
 def button_clear():
     e.delete(0, END)
@@ -63,7 +61,6 @@ def button_divide():
     math = "division"
     f_num = int(first_number)
     e.delete(0, END)
-
 
 button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
 button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
